@@ -1,0 +1,217 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="E:\fstrg\funpatchez\_exp\_master\as24bitvalue.v4p" scrollx="0" scrolly="690" systemname="as24bitvalue" filename="E:\fstrg\funpatchez\_exp\_master\as24bitvalue.v4p">
+   <NODE systemname="AsRaw (String)" nodename="AsRaw (String)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="1515" top="5730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Encoding" slicecount="1" values="|System Default|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1515" top="5325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="None">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Intersperse String" visible="1" slicecount="1" values="|,|">
+   </PIN>
+   </NODE>
+   <NODE systemname="RGB (Color Split)" nodename="RGB (Color Split)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="1515" top="1500" width="825" height="270">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Red" visible="1">
+   </PIN>
+   <PIN pinname="Green" visible="1">
+   </PIN>
+   <PIN pinname="Blue" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1500" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="65536">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1890" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="256">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="1500" top="3990" width="855" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1500" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Destination Maximum" slicecount="1" values="255">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mapping" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Source Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Source Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Destination Minimum" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1500" top="2985" width="855" height="270">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1500" top="1995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="1500" top="4335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (MinInt .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="2310" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="MathRound (Value)" filename="%VVVV%\addonpack\lib\nodes\plugins\MathRound.dll" nodename="MathRound (Value)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="1500" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="2655">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="X" dstnodeid="3" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="5" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="XYZ" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="7" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Red" dstnodeid="8" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Green" dstnodeid="8" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Blue" dstnodeid="8" dstpinname="Z">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <NODE id="12" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="1515" top="6075" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="6075" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="12" dstpinname="Input Node">
+   </LINK>
+   <NODE id="13" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="1515" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Color Output" dstnodeid="2" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y" dstnodeid="4" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Z" dstnodeid="10" dstpinname="Input 1">
+   </LINK>
+   <BOUNDS type="Window" left="14325" top="5055" width="3900" height="6675">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="1515" top="4890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Padding" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Align" slicecount="1" values="Right">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   </PATCH>
