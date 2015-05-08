@@ -1,0 +1,73 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="E:\fstrg\funpatchez\_exp\_master\rainbow-Test.v4p" scrollx="0" scrolly="0" systemname="rainbow-Test" filename="E:\fstrg\funpatchez\_exp\_master\rainbow-Test.v4p">
+   <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="135" top="1875" width="600" height="270">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Hue" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value" slicecount="120" visible="1" values="1.42027422391014,1.41194089057681,1.40360755724347,1.39527422391014,1.38694089057681,1.37860755724347,1.37027422391014,1.36194089057681,1.35360755724347,1.34527422391014,1.33694089057681,1.32860755724347,1.32027422391014,1.31194089057681,1.30360755724347,1.29527422391014,1.28694089057681,1.27860755724347,1.27027422391014,1.26194089057681,1.25360755724347,1.24527422391014,1.23694089057681,1.22860755724347,1.22027422391014,1.21194089057681,1.20360755724347,1.19527422391014,1.18694089057681,1.17860755724347,1.17027422391014,1.16194089057681,1.15360755724347,1.14527422391014,1.13694089057681,1.12860755724347,1.12027422391014,1.11194089057681,1.10360755724347,1.09527422391014,1.08694089057681,1.07860755724347,1.07027422391014,1.06194089057681,1.05360755724347,1.04527422391014,1.03694089057681,1.02860755724347,1.02027422391014,1.01194089057681,1.00360755724347,0.99527422391014,0.986940890576807,0.978607557243474,0.97027422391014,0.961940890576807,0.953607557243474,0.94527422391014,0.936940890576807,0.928607557243474,0.92027422391014,0.911940890576807,0.903607557243474,0.89527422391014,0.886940890576807,0.878607557243474,0.87027422391014,0.861940890576807,0.853607557243474,0.84527422391014,0.836940890576807,0.828607557243474,0.82027422391014,0.811940890576807,0.803607557243474,0.79527422391014,0.786940890576807,0.778607557243474,0.77027422391014,0.761940890576807,0.753607557243474,0.74527422391014,0.736940890576807,0.728607557243474,0.72027422391014,0.711940890576807,0.703607557243474,0.69527422391014,0.686940890576807,0.678607557243474,0.67027422391014,0.661940890576807,0.653607557243474,0.64527422391014,0.636940890576807,0.628607557243474,0.62027422391014,0.611940890576807,0.603607557243474,0.59527422391014,0.586940890576807,0.578607557243474,0.57027422391014,0.561940890576807,0.553607557243474,0.54527422391014,0.536940890576807,0.528607557243474,0.52027422391014,0.511940890576807,0.503607557243474,0.49527422391014,0.486940890576807,0.478607557243474,0.47027422391014,0.461940890576807,0.453607557243474,0.44527422391014,0.436940890576807,0.428607557243474">
+   </PIN>
+   </NODE>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="135" top="1155" width="960" height="270">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="120">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Phase" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="135" top="765" width="750" height="270">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="0.6" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Hue">
+   </LINK>
+   <BOUNDS type="Window" left="8505" top="7290" width="3105" height="3825">
+   </BOUNDS>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="3" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="135" top="2295" width="570" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="2295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="3" dstpinname="Color Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="330" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.6">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="s">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Period">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Period">
+   </LINK>
+   </PATCH>
